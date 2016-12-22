@@ -8,29 +8,32 @@
 ## References:
 
 Organelle
-https://cdn.shopify.com/s/files/1/0159/3944/files/Welcome_to_Organelle_-_English_v2.pdf?15905572571206896609
-http://forum.critterandguitari.com/t/installing-supercollider-on-the-organelle/164
+
+- https://cdn.shopify.com/s/files/1/0159/3944/files/Welcome_to_Organelle_-_English_v2.pdf?15905572571206896609
+- http://forum.critterandguitari.com/t/installing-supercollider-on-the-organelle/164
 
 Monome
-http://monome.org/docs/linux/
-http://llllllll.co/t/building-serialosc-on-arch-linux/738
-http://archive.monome.org/community/discussion/15226/linux-libmonome-installation-trouble/p1
+
+- http://monome.org/docs/linux/
+- http://llllllll.co/t/building-serialosc-on-arch-linux/738
+- http://archive.monome.org/community/discussion/15226/linux-libmonome-installation-trouble/p1
 
 PureData
-https://puredata.info/community/pdwiki/ComPort
+
+- https://puredata.info/community/pdwiki/ComPort
 
 # Installation
 
 ## Setup wifi & get write permissions
 
-    1. ip link set wlan0 up
-    2. wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "name" "pass") &
-    3. dhcpcd wlan0
-    4. mount / -o remount,rw
+    ip link set wlan0 up
+    wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "name" "pass") &
+    dhcpcd wlan0
+    mount / -o remount,rw
 
 ## Install Deps
 
-    1. pacman -Syy python
+    pacman -Syy python
 
 ## Install libmonome and serialosc
 
