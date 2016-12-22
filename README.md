@@ -17,10 +17,6 @@
     # allow read/write permissions
     mount / -o remount,rw
 
-## Install/Update version control
-
-    pacman -Syy git svn
-
 ## Install [comport]
 
 via https://puredata.info/community/pdwiki/ComPort
@@ -36,7 +32,6 @@ Then, open PureData from the GUI and add ComPort to your externals path.
 2. Click "New"
 3. Browse to /root/externals/comport
 4. Click "OK"
-
 
 ## Open Monome Test Patch
 
