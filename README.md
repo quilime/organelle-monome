@@ -5,39 +5,26 @@
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
 
-## References:
 
-Organelle
-
-- https://cdn.shopify.com/s/files/1/0159/3944/files/Welcome_to_Organelle_-_English_v2.pdf?15905572571206896609
-- http://forum.critterandguitari.com/t/installing-supercollider-on-the-organelle/164
-
-Monome
-
-- http://monome.org/docs/linux/
-- http://llllllll.co/t/building-serialosc-on-arch-linux/738
-- http://archive.monome.org/community/discussion/15226/linux-libmonome-installation-trouble/p1
-
-PureData
-
-- https://puredata.info/community/pdwiki/ComPort
 
 # Installation
 
 ## Setup wifi & get write permissions
 
+    # setup wifi
     ip link set wlan0 up
     wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "name" "pass") &
     dhcpcd wlan0
+    # allow read/write permissions
     mount / -o remount,rw
 
-## Install Deps
+## Install/Update Deps
 
-    pacman -Syy python
+    pacman -Syy git python
 
 ## Install libmonome and serialosc
 
-Arch doesn't look at usr/local/lib by default, but libmonome places its files there.
+    # Arch doesn't look at usr/local/lib by default, but libmonome places its files there.
     echo "/usr/local/lib" > /etc/ld.so.conf.d/usrlocal.conf
 
     mkdir monome
@@ -55,3 +42,33 @@ Arch doesn't look at usr/local/lib by default, but libmonome places its files th
     ./waf configure
     ./waf
     ./waf install
+
+## Install [comport]
+
+  https://puredata.info/community/pdwiki/ComPort
+
+  svn co https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/iem/comport
+
+  cd comport
+  make
+
+
+
+
+
+## References
+
+Organelle
+
+- http://forum.critterandguitari.com/t/serialosc-monome-with-organelle/233/15
+- http://forum.critterandguitari.com/t/installing-supercollider-on-the-organelle/164
+
+Monome
+
+- http://monome.org/docs/linux/
+- http://monome.org/docs/osc/
+- http://llllllll.co/t/critter-guitari-organelle/1570/45
+
+PureData
+
+- https://puredata.info/community/pdwiki/ComPort
