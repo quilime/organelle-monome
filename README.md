@@ -17,6 +17,43 @@
     # allow read/write permissions
     mount / -o remount,rw
 
+# Install deps
+
+   pacman -Syy git svn python
+
+# Option 1 (using serialosc to send/receive OSC):
+
+## Install libmonome and serialosc
+
+    # Arch doesn't look at usr/local/lib by default, but libmonome places its files there.
+    echo "/usr/local/lib" > /etc/ld.so.conf.d/usrlocal.conf
+
+    mkdir monome
+    cd monome
+    git clone https://github.com/monome/libmonome.git
+    git clone https://github.com/monome/serialosc.git
+
+    cd libmonome
+    ./waf configure
+    ./waf
+    ./waf install
+
+    cd ../serialosc
+    git submodule init && git submodule update
+    ./waf configure
+    ./waf
+    ./waf install
+
+## Startup serialosc-device directly
+
+    ./build/bin/serialosc-device /dev/ttyUSB0
+    # make a note of the portnumber
+
+Plug in your Monome and open monome-osc.pd. If port number differs, then update the pd patch with the correct port.
+
+
+# Option 2 (send/receive raw bytes with ComPort):
+
 ## Install [comport]
 
 via https://puredata.info/community/pdwiki/ComPort
@@ -35,8 +72,7 @@ Then, open PureData from the GUI and add ComPort to your externals path.
 
 ## Open Monome Test Patch
 
-Plug in your Monome and open main.pd from this repo to get started.
-
+Plug in your Monome and open monome-comport.pd.
 
 # References
 
