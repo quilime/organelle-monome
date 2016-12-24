@@ -1,21 +1,22 @@
 # Organelle + Monome
 
-## Hardware:
+## Hardware
 
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
 
 # Installation
 
-## Setup wifi & get write permissions
-
-    # setup wifi
-    ip link set wlan0 up
-    wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "name" "pass") &
-    dhcpcd wlan0
+##  Set read/write permissions and Setup WIFI
 
     # allow read/write permissions
     mount / -o remount,rw
+
+    # setup wifi
+    # note: this works with 2.4GH networks
+    ip link set wlan0 up
+    wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "networkname" "pass") &
+    dhcpcd wlan0
 
 # Install deps
 
@@ -44,15 +45,17 @@ This may be incomplete as I've installed a lot of packages as I've been working 
     ./waf
     ./waf install
 
+## Plug in Monome
+
+  It should show up on `/dev/ttyUSB0`
+
 ## Startup serialosc-device directly
 
     ./build/bin/serialosc-device /dev/ttyUSB0
-    # make a note of the portnumber
 
-## Open Monome Serial OSC Test Patch
+##  Monome Organelle Test Patch
 
-Plug in your Monome and open Patches/Monome/main.pd
-
+Patches/Monome/main.pd
 
 
 # Optional: Send/rRceive raw bytes with ComPort
