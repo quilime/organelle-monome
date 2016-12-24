@@ -26,10 +26,10 @@ via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
     # setup wifi
     # note: this works with 2.4GH networks
     ip link set wlan0 up
-    wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "networkname" "pass") &
+    wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "networkID" "pass") &
     dhcpcd wlan0
 
-You can also use /scripts/start-wifi.sh after editing /scripts/wifi-wap.conf with your networkID and password.
+You can also use `/scripts/start-wifi.sh` after editing `/scripts/wifi-wap.conf` with your networkID and password.
 
 # Install
 
