@@ -6,14 +6,18 @@
   - Monome 128 Grayscale
   - Powered USB Hub
 
-Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, but otherwise works fine. I used a powered USB hub to solve this problem.
+Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, a powered USB hub solved this.
 
 # Installation
 
-##  Set read/write permissions and Setup WIFI
+##  Set read/write permissions
 
     # allow read/write permissions
     mount / -o remount,rw
+
+## Setup WIFI
+
+via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
 
     # setup wifi
     # note: this works with 2.4GH networks
@@ -21,15 +25,18 @@ Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Or
     wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "networkname" "pass") &
     dhcpcd wlan0
 
-# Install deps
+You can also use /scripts/start-wifi.sh after editing /scripts/wifi-wap.conf with your networkID and password.
 
-This may be incomplete as I've installed a lot of packages as I've been working on my organelle, YMMV.
+# Install Dependencies
+
+This is likely incomplete as I've installed a lot of packages as I've been working on my organelle, YMMV.
 
    pacman -Syy git svn python
 
 ## Install libmonome and serialosc
 
-    # Arch doesn't look at usr/local/lib by default, but libmonome places its files there.
+    # Arch doesn't look at usr/local/lib by default,
+    # but libmonome places its files there.
     echo "/usr/local/lib" > /etc/ld.so.conf.d/usrlocal.conf
 
     mkdir monome
@@ -56,12 +63,14 @@ This may be incomplete as I've installed a lot of packages as I've been working 
 
     ./build/bin/serialosc-device /dev/ttyUSB0
 
+Or, use `start-serialosc-server.sh` and `stop-serialosc-server.sh` in /scripts/.
+
 ##  Monome Organelle Test Patch
 
 Patches/Monome/main.pd
 
 
-# Optional: Send/rRceive raw bytes with ComPort
+# Optional/Alternative: Send/Receive raw bytes with ComPort
 
 ## Install [comport]
 
@@ -72,7 +81,7 @@ via https://puredata.info/community/pdwiki/ComPort
   cd comport
   make
 
-Then, open PureData from the GUI and add ComPort to your externals path.
+## PureData from the GUI and add ComPort to your externals path.
 
 1. Navigate to File > Preferences > Path.
 2. Click "New"
