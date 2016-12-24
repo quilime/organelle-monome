@@ -49,11 +49,10 @@ This may be incomplete as I've installed a lot of packages as I've been working 
     ./build/bin/serialosc-device /dev/ttyUSB0
     # make a note of the portnumber
 
-## Install Test Patches
+## Open Monome Serial OSC Test Patch
 
-Copy monome patches from the Patches dir in this repo to /usbdrive/Patches/
+Plug in your Monome and open Patches/Monome/main.pd
 
-For editing locally, edit Patches/Monome/main.pd
 
 
 # Optional: Send/rRceive raw bytes with ComPort
