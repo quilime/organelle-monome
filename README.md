@@ -19,9 +19,9 @@
 
 # Install deps
 
-   pacman -Syy git svn python
+This may be incomplete as I've installed a lot of packages as I've been working on my organelle, YMMV.
 
-# Option 1 (using serialosc to send/receive OSC):
+   pacman -Syy git svn python
 
 ## Install libmonome and serialosc
 
@@ -49,10 +49,14 @@
     ./build/bin/serialosc-device /dev/ttyUSB0
     # make a note of the portnumber
 
-Plug in your Monome and open monome-osc.pd. If port number differs, then update the pd patch with the correct port.
+## Install Test Patches
+
+Copy monome patches from the Patches dir in this repo to /usbdrive/Patches/
+
+For editing locally, edit Patches/Monome/main.pd
 
 
-# Option 2 (send/receive raw bytes with ComPort):
+# Optional: Send/rRceive raw bytes with ComPort
 
 ## Install [comport]
 
@@ -85,6 +89,7 @@ Monome
 
 - http://monome.org/docs/linux/
 - http://monome.org/docs/osc/
+- http://monome.org/docs/grid-studies/pd/
 - http://llllllll.co/t/critter-guitari-organelle/1570/45
 
 PureData
