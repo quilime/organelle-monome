@@ -8,12 +8,16 @@
 
 Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, a powered USB hub solved this.
 
-# Installation
+# Setup
+
+Attach your Organelle to a 1920x1080 display via HDMI, and plug in a mouse/keyboard via an external USB hub. Power up the Organelle by plugging it in.
 
 ##  Set read/write permissions
 
     # allow read/write permissions
     mount / -o remount,rw
+
+Or, run `/root/scripts/remount-rw.sh`, which ships with the Organelle.
 
 ## Setup WIFI
 
@@ -27,7 +31,7 @@ via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
 
 You can also use /scripts/start-wifi.sh after editing /scripts/wifi-wap.conf with your networkID and password.
 
-# Install Dependencies
+# Install
 
 This is likely incomplete as I've installed a lot of packages as I've been working on my organelle, YMMV.
 
