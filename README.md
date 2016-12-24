@@ -6,7 +6,7 @@
   - Monome 128 Grayscale
   - Powered USB Hub
 
-  Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, but otherwise works fine. I used a powered USB hub to solve this problem.
+Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, but otherwise works fine. I used a powered USB hub to solve this problem.
 
 # Installation
 
