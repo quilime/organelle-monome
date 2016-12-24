@@ -76,10 +76,10 @@ Patches/Monome/main.pd
 
 via https://puredata.info/community/pdwiki/ComPort
 
-  cd /root/externals/
-  svn co https://svn.code.sf.net/p/pure-data/svn/trunk/externals/iem/comport/comport/
-  cd comport
-  make
+    cd /root/externals/
+    svn co https://svn.code.sf.net/p/pure-data/svn/trunk/externals/iem/comport/comport/
+    cd comport
+    make
 
 ## PureData from the GUI and add ComPort to your externals path.
 
