@@ -8,6 +8,11 @@
 
 Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, a powered USB hub solved this.
 
+More patches and externals:
+
+  - https://github.com/quilime/organelle-patches
+  - https://github.com/quilime/organelle-externals
+
 # Setup
 
 Attach your Organelle to a 1920x1080 display via HDMI, and plug in a mouse/keyboard via an external USB hub. Power up the Organelle by plugging it in.
