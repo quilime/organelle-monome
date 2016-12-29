@@ -15,6 +15,14 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
 
 Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub. Power up the Organelle by plugging it in.
 
+# Install
+
+## Copy Scripts
+
+Copy everything in `scripts/` in this repo to `/root/scripts` on the Organelle.
+
+Copy the everything in `Patches/` to `/usbdrive/Patches/` on the Organelle.
+
 ##  Set read/write permissions
 
     # allow read/write permissions
@@ -33,14 +41,6 @@ via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
     dhcpcd wlan0
 
 You can also use `/scripts/start-wifi.sh` after editing `/scripts/wifi-wap.conf` with your networkID and password.
-
-# Install
-
-## Copy Scripts
-
-Copy everything in `scripts/` in this repo to `/root/scripts` on the Organelle.
-
-Copy the everything in `Patches/` to `/usbdrive/Patches/` on the Organelle.
 
 ## Install Dependencies
 
