@@ -4,16 +4,16 @@
 
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
-  - USB Wifi Adapter (I used a [Canakit adapter](http://www.canakit.com/raspberry-pi-wifi.html), but any adapter with an Ralink 5370 should work).
-  - 1920x1080 monitor w/HDMI connection.
-  - Mouse/Keyboard
+  - USB Wifi Adapter (I used a [Canakit adapter](http://www.canakit.com/raspberry-pi-wifi.html), but any adapter with a Ralink 5370 chipset should work).
+  - 1920 x 1080 monitor w/HDMI connection.
+  - Mouse & Keyboard
   - Powered USB Hub
 
-Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, the addition of the powered USB hub solved this.
+Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, the addition of the powered USB hub solved this.
 
 # Setup
 
-Attach your Organelle to a 1920x1080 display via HDMI, and plug in a mouse/keyboard via an external USB hub. Power up the Organelle by plugging it in.
+Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub. Power up the Organelle by plugging it in.
 
 ##  Set read/write permissions
 
@@ -38,7 +38,9 @@ You can also use `/scripts/start-wifi.sh` after editing `/scripts/wifi-wap.conf`
 
 ## Copy Scripts
 
-Copy everything in `scripts/` in this repo to `/root/scripts` on the organelle.
+Copy everything in `scripts/` in this repo to `/root/scripts` on the Organelle.
+
+Copy the everything in `Patches/` to `/usbdrive/Patches/` on the Organelle.
 
 ## Install Dependencies
 
@@ -70,11 +72,12 @@ This is likely incomplete as I've installed a lot of packages as I've been worki
 
 ## Plug in Monome
 
-  It should show up on `/dev/ttyUSB0`
+  It should show up as `/dev/ttyUSB0`
 
 ##  Monome Organelle Test Patch
 
 Patches/Monome/main.pd
+
 
 
 # Optional/Alternative: Send/Receive raw bytes with ComPort
@@ -94,6 +97,7 @@ via https://puredata.info/community/pdwiki/ComPort
 2. Click "New"
 3. Browse to /root/externals/comport
 4. Click "OK"
+
 
 ## Open Monome Test Patch
 
