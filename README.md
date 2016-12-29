@@ -82,6 +82,8 @@ Patches/Monome/main.pd
 
 # Optional/Alternative: Send/Receive raw bytes with ComPort
 
+I've included a test patch to experiment with sending serial directly to the Monome with Comport. This is included just to be thourough, and could be useful for other serial interfaces, such as Arduino.
+
 ## Install [comport]
 
 via https://puredata.info/community/pdwiki/ComPort
@@ -97,7 +99,6 @@ via https://puredata.info/community/pdwiki/ComPort
 2. Click "New"
 3. Browse to /root/externals/comport
 4. Click "OK"
-
 
 ## Open Monome Test Patch
 
