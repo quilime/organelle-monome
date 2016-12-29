@@ -72,17 +72,23 @@ This is likely incomplete as I've installed a lot of packages as I've been worki
 
 ## Plug in Monome
 
-  It should show up as `/dev/ttyUSB0`
+  After plugging in the Monome via USB, it should show up as `/dev/ttyUSB0`.
 
-##  Monome Organelle Test Patch
+##  Monome Organelle Test Patches
 
-Patches/Monome/main.pd
+    Patches/Monome/main.pd
+
+This patch should connect the Monome to the organelle. Each Monome button should illuminate when it's pressed. Open the [serialosc] patch to see how the patch connects to serialosc via the start/stop serialosc scripts.
+
+    Patches/Monome Basic Poly/main.pd
+
+This patch combines the Basic Poly patch that came with the Organelle, and the Monome's keys.
 
 
 
 # Optional/Alternative: Send/Receive raw bytes with ComPort
 
-I've included a test patch to experiment with sending serial directly to the Monome with Comport. This is included just to be thourough, and could be useful for other serial interfaces, such as Arduino.
+I've also included a test patch to experiment with sending serial directly to the Monome via [comport]. This is included just to be thourough, and could be useful for other serial interfaces, such as Arduino.
 
 ## Install [comport]
 
