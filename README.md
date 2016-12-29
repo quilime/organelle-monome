@@ -4,9 +4,12 @@
 
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
+  - USB Wifi Adapter (I used a [Canakit adapter](http://www.canakit.com/raspberry-pi-wifi.html), but any adapter with an Ralink 5370 should work).
+  - 1920x1080 monitor w/HDMI connection.
+  - Mouse/Keyboard
   - Powered USB Hub
 
-Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, a powered USB hub solved this.
+Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, the addition of the powered USB hub solved this.
 
 # Setup
 
@@ -32,6 +35,12 @@ via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
 You can also use `/scripts/start-wifi.sh` after editing `/scripts/wifi-wap.conf` with your networkID and password.
 
 # Install
+
+## Copy Scripts
+
+Copy everything in `scripts/` in this repo to `/root/scripts` on the organelle.
+
+## Install Dependencies
 
 This is likely incomplete as I've installed a lot of packages as I've been working on my organelle, YMMV.
 
@@ -62,12 +71,6 @@ This is likely incomplete as I've installed a lot of packages as I've been worki
 ## Plug in Monome
 
   It should show up on `/dev/ttyUSB0`
-
-## Startup serialosc-device directly
-
-    ./build/bin/serialosc-device /dev/ttyUSB0
-
-Or, use `start-serialosc-server.sh` and `stop-serialosc-server.sh` in /scripts/.
 
 ##  Monome Organelle Test Patch
 
