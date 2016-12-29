@@ -23,12 +23,6 @@ Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, ke
 
 Or, run `/root/scripts/remount-rw.sh`, which ships with the Organelle.
 
-## Copy Files
-
-Copy everything in `scripts/` in this repo to `/root/scripts` on the Organelle.
-
-Copy the everything in `Patches/` to `/usbdrive/Patches/` on the Organelle.
-
 ## Setup WIFI
 
 via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
@@ -40,6 +34,12 @@ via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
     dhcpcd wlan0
 
 You can also use `/scripts/start-wifi.sh` after editing `/scripts/wifi-wap.conf` with your networkID and password.
+
+## Copy Files
+
+Copy everything in `scripts/` in this repo to `/root/scripts` on the Organelle.
+
+Copy the everything in `Patches/` to `/usbdrive/Patches/` on the Organelle.
 
 
 ## Install Dependencies
