@@ -78,12 +78,11 @@ This is likely incomplete as I've installed a lot of packages as I've been worki
 
     Patches/Monome/main.pd
 
-This patch should connect the Monome to the organelle. Each Monome button should illuminate when it's pressed. Open the [serialosc] patch to see how the patch connects to serialosc via the start/stop serialosc scripts.
+This patch should connect the Monome to the organelle. When the patch stars, all the LED's should flash on and then off. Each Monome button should illuminate when it's pressed. Open the [serialosc] patch to see how the patch connects to serialosc via the start/stop serialosc scripts.
 
     Patches/Monome Basic Poly/main.pd
 
-This patch combines the Basic Poly patch that came with the Organelle, and the Monome's keys.
-
+This patch combines the Basic Poly patch that came with the Organelle, utilizing the Monome's buttons as keys.
 
 
 # Optional/Alternative: Send/Receive raw bytes with ComPort
