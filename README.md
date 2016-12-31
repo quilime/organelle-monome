@@ -12,12 +12,12 @@ Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Or
 
 1. Copy the Patches over, and copy the`include/` folder to the root of the Organelle's USB drive, so it's alongside the Patches folder. The structure should look like this on the Organlle's USB:
 
-  - usbdrive/
-    - Patches/
-      - Monome/
-      - Monome Basic Poly/
-    - include/
-      - monome/
+- usbdrive/
+  - Patches/
+    - Monome/
+    - Monome Basic Poly/
+  - include/
+    - monome/
 
 Two patches are included:
 
