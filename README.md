@@ -15,6 +15,7 @@ Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Or
   - usbdrive/
     - Patches/
     - include/
+      - monome/
 
 1. Copy the patches to the `Patches/` folder on the Organelle's USB drive.
 
