@@ -10,7 +10,7 @@ Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Or
 
 ## How to Use
 
-1. Copy the `include/` folder to the root of the Organelle's USB drive, so it looks like this:
+1. Copy the `include/` folder to the root of the Organelle's USB drive, so it's alongside the Patches folder like this:
 
   - usbdrive/
     - Patches/
