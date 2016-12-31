@@ -1,5 +1,4 @@
-#N canvas 216 352 999 681 10;
-#X declare -path ../../include;
+#N canvas 550 295 999 681 10;
 #X msg 44 231 /monome/grid/led/all 1;
 #X msg 57 255 /monome/grid/led/all 0;
 #X obj 49 497 routeOSC /monome/grid/key;
@@ -25,15 +24,13 @@
 #X obj 292 613 s screenLine2;
 #X msg 291 590 x \$1 y \$2 s \$3;
 #X msg 291 554 \; screenLine1 Monome Button Test \;;
-#X text 41 17 Monome Button and LED Test;
+#X text 40 49 Monome Button and LED Test;
 #X text 241 321 Toggle LED State;
 #X text 235 235 Blink LED's to start;
-#X obj 50 432 monome/serialosc;
-#X obj 42 60 declare -path ../../include;
-#X text 40 41 global includes;
 #X text 84 474 Get/Set LED State;
-#X connect 0 0 26 0;
-#X connect 1 0 26 0;
+#X obj 50 432 serialosc;
+#X connect 0 0 27 0;
+#X connect 1 0 27 0;
 #X connect 2 0 3 0;
 #X connect 2 0 11 0;
 #X connect 2 0 21 0;
@@ -44,8 +41,8 @@
 #X connect 8 0 11 0;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
-#X connect 11 0 26 0;
-#X connect 12 0 26 1;
+#X connect 11 0 27 0;
+#X connect 12 0 27 1;
 #X connect 14 0 0 0;
 #X connect 14 0 17 0;
 #X connect 15 0 16 0;
@@ -53,4 +50,4 @@
 #X connect 17 0 1 0;
 #X connect 18 0 22 0;
 #X connect 21 0 20 0;
-#X connect 26 0 2 0;
+#X connect 27 0 2 0;
