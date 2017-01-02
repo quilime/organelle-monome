@@ -41,11 +41,13 @@ Follow the instructions on [this forum thread](http://forum.critterandguitari.co
 
 ## Enable Read/Write
 
+Run the following command from the terminal.
+
     ~/scripts/remount-rw.sh
 
 ## Install Python
 
-Install python with Arch's package manager [pacman](https://wiki.archlinux.org/index.php/Pacman).
+Install python with Arch's package manager [pacman](https://wiki.archlinux.org/index.php/Pacman)
 
     pacman -Syy python
 
