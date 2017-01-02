@@ -33,10 +33,6 @@ Create symlinks for monome libraries
 
     /usbdrive/include/monome/createlinks.sh
 
-Remount the filesystem as read only
-
-    /root/scripts/remount-ro.sh
-
 Load up the Monome patches to test.
 
 ## Monome
