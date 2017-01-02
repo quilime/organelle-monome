@@ -19,10 +19,12 @@ Copy the`include/` folder to the root of the Organelle's USB drive, so it's alon
 The structure should look like this on the Organelle's USB:
 
 - usbdrive/
+  - include/
   - Patches/
+    - ...
     - Monome/
     - Monome Basic Poly/
-  - include/
+    - ...
 
 ## Install
 
