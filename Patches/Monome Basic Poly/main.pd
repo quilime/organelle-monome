@@ -1,4 +1,4 @@
-#N canvas 768 459 811 633 10;
+#N canvas 769 456 811 633 10;
 #X obj 73 175 routeOSC /monome/grid/key;
 #X obj 73 215 unpack f f f;
 #X floatatom 73 270 5 0 0 0 - - -, f 5;
@@ -187,6 +187,7 @@ Aux: Wave \;;
 #X text 423 218 Setting Organelle screen with last pressed key;
 #X text 260 99 Turn on LED on Touch;
 #X obj 73 138 serialosc;
+#X obj 466 43 loadbang;
 #X connect 0 0 1 0;
 #X connect 0 0 5 0;
 #X connect 0 0 16 0;
@@ -208,3 +209,4 @@ Aux: Wave \;;
 #X connect 14 0 11 0;
 #X connect 16 0 15 0;
 #X connect 21 0 0 0;
+#X connect 22 0 6 0;

@@ -5,8 +5,11 @@
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
   - Powered USB Hub
+  - 1920 x 1080 monitor w/HDMI connection.
+  - Mouse & Keyboard
+  - Powered USB Hub
 
-Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, the addition of the powered USB hub solved this. A 64 might not need a hub.
+Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, the addition of the powered USB hub solved this. A 64 might not need a hub.
 
 ## How to Use
 
@@ -17,9 +20,24 @@ Note: Half of my 128's LEDs weren't lit when powered from the USB port on the Or
     - Monome/
     - Monome Basic Poly/
   - include/
-    - monome/
 
-Two patches are included:
+## Run install script
+
+Boot the Organelle with a monitor/keyboard/mouse. Run the following commands:
+
+Remount the filesystem as read/write
+
+    /root/scripts/remount-rw.sh
+
+Create symlinks for monome libraries
+
+    /usbdrive/include/monome/createlinks.sh
+
+Remount the filesystem as read only
+
+    /root/scripts/remount-ro.sh
+
+Load up the Monome patches to test.
 
 ## Monome
 
