@@ -51,7 +51,7 @@ Arch will sync its package database, and then ask you to confirm the installion.
 
 Run `serialosc-install.sh` on the Organelle's USB drive.
 
-     /usbdrive/serialosc-install.sh
+     cd /usbdrive/ && ./serialosc-install.sh
 
 This downloads and installs libmonome and serialosc. After it's successfully installed, try the included Patches with the Organelle to see if everything works.
 

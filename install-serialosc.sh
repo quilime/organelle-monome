@@ -5,7 +5,7 @@ set -x
 # Arch doesn't look at usr/local/lib by default, but libmonome places its files there.
 echo "/usr/local/lib" > /etc/ld.so.conf.d/usrlocal.conf
 
-mkdir tmp
+mkdir -p
 pushd tmp > /dev/null
 
 git clone https://github.com/monome/libmonome.git
