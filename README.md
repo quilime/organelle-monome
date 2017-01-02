@@ -15,11 +15,11 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
 
 ## Setup
 
-Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub.
-
 Copy the patches in this repo to the Patches folder on the Organelle's USB.
 
 Copy the `serialosc-install.sh` script in this repo onto the root of Organelle's USB. The folder structure should look like this:
+
+Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub.
 
 - USBDRIVE/
   - serialosc-install.sh
