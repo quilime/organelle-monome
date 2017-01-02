@@ -1,6 +1,6 @@
 # Organelle + Monome
 
-This is a guide for getting a [Monome Grid](http://monome.org/grid/) working with the [Critter + Guitari Organelle](https://www.critterandguitari.com/pages/organelle). The Organelle has an arm CPU, and runs Pure Data on Arch Linux, so you will be using the linux command line, mostly to install [serialosc](https://github.com/monome/serialosc), a program that sends and receives OSC and converts them to serial commands that the Monome hardware uses.
+This is a guide for getting a [Monome Grid](http://monome.org/grid/) working with the [Critter + Guitari Organelle](https://www.critterandguitari.com/pages/organelle). The Organelle has an arm CPU, and runs Pure Data on Arch Linux, so you will be using the linux command line to install [serialosc](https://github.com/monome/serialosc) before you can use a Monome with PureData. Serialosc is a program that sends and receives OSC and converts them to serial commands that the Monome Grid.
 
 #### Hardware used for testing
 
