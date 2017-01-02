@@ -14,10 +14,10 @@ Copy the example patches to the Patches folder on the USB drive.
 
 ### Monome-Install
 
-Run this page first. Follow the instructions on the OLED. Press AUX to start installation.
+Run this patch first. Follow the instructions on the OLED. Press AUX to start installation.
 
 After installation, all the monome's LED's should blink, and then each key's LED should illuminate when pressed. The Organelle should display the last key pressed x y and state.
 
 ### Monome Basic Poly
 
-The same thing as Monome, but each key plays sounds based on the Basic Poly patch that shipped with the Organelle.
+After running Monome-Install, try this patch. Rach key press lights the coresponding LED, and plays sounds based on the Basic Poly patch that shipped with the Organelle.
