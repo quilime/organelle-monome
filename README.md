@@ -37,7 +37,7 @@ Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, ke
 
 ## Setup WIFI
 
-This was the trickiest part. Follow the instructions here:
+This was the trickiest part. Follow the instructions on [this form thread](http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9).
 
 ## Enable Read/Write
 
