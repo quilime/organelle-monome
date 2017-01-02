@@ -13,7 +13,7 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
 
 ## How to Use
 
-Copy the Patches in the Patches folder on the USB drive.
+Copy the Patches to the Patches folder on the USB drive.
 
 Copy the`include/` folder to the root of the Organelle's USB drive, so it's alongside the Patches folder.
 
