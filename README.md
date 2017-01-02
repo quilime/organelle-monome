@@ -1,6 +1,8 @@
 # Organelle + Monome
 
-## Hardware
+This is a guide for getting a [Monome Grid](http://monome.org/grid/) working with the [Critter + Guitari Organelle](https://www.critterandguitari.com/pages/organelle). The Organelle has an arm CPU, and runs Pure Data on Arch Linux, so you will be using the linux command line, mostly to install [serialosc](https://github.com/monome/serialosc), a program that sends and receives OSC and converts them to serial commands that the Monome hardware uses.
+
+#### Hardware used for testing
 
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
@@ -11,68 +13,39 @@
 
 Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, the addition of the powered USB hub solved this.
 
-# Setup
+## Setup
 
 Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub. Power up the Organelle by plugging it in.
 
-# Install
-##  Set read/write permissions
+When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
 
-    # allow read/write permissions
-    mount / -o remount,rw
+    [root@organelle ~]]# _
 
-Or, run `/root/scripts/remount-rw.sh`, which ships with the Organelle.
+## Installation
 
-## Setup WIFI
+Enable read/write permissions. Type the following, and pressing [enter]:
 
-via http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
+    ~/scripts/remount-rw.sh
 
-    # setup wifi
-    # note: this works with 2.4GH networks
-    ip link set wlan0 up
-    wpa_supplicant -D nl80211,wext -i wlan0 -c <(wpa_passphrase "networkID" "pass") &
-    dhcpcd wlan0
+Setup WIFI. Follow the instructions here: http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
 
-You can also use `/scripts/start-wifi.sh` after editing `/scripts/wifi-wap.conf` with your networkID and password.
+Once you are online, we can clone this repo with git. After each line, press [enter]
 
-## Copy Files
+    git clone https://github.com/quilime/organelle-monome.git && cd organelle-monome
 
-Copy everything in `scripts/` in this repo to `/root/scripts` on the Organelle.
+Install python with Arch's package manager [pacman](https://wiki.archlinux.org/index.php/Pacman).
 
-Copy the everything in `Patches/` to `/usbdrive/Patches/` on the Organelle.
+    pacman -Syy python
 
+Arch will sync its package database, and then ask you to confirm the installion. Type `y` and hit enter, or just hit enter.
 
-## Install Dependencies
+Run the organelle-monome installation script
 
-This is likely incomplete as I've installed a lot of packages as I've been working on my organelle, YMMV.
+     ./install.sh
 
-   pacman -Syy git svn python
+## Install Patches
 
-## Install libmonome and serialosc
-
-    # Arch doesn't look at usr/local/lib by default,
-    # but libmonome places its files there.
-    echo "/usr/local/lib" > /etc/ld.so.conf.d/usrlocal.conf
-
-    mkdir monome
-    cd monome
-    git clone https://github.com/monome/libmonome.git
-    git clone https://github.com/monome/serialosc.git
-
-    cd libmonome
-    ./waf configure
-    ./waf
-    ./waf install
-
-    cd ../serialosc
-    git submodule init && git submodule update
-    ./waf configure
-    ./waf
-    ./waf install
-
-## Plug in Monome
-
-  After plugging in the Monome via USB, it should show up as `/dev/ttyUSB0`.
+Copy the patches in this repo to the Patches folder on the Organelle's USB. Two patches are included:
 
 ##  Monome Organelle Test Patches
 
@@ -83,46 +56,3 @@ This patch should connect the Monome to the organelle. When the patch stars, all
     Patches/Monome Basic Poly/main.pd
 
 This patch combines the Basic Poly patch that came with the Organelle, utilizing the Monome's buttons as keys.
-
-
-# Optional/Alternative: Send/Receive raw bytes with ComPort
-
-I've also included a test patch to experiment with sending serial directly to the Monome via [comport]. This is included just to be thourough, and could be useful for other serial interfaces, such as Arduino.
-
-## Install [comport]
-
-via https://puredata.info/community/pdwiki/ComPort
-
-    cd /root/externals/
-    svn co https://svn.code.sf.net/p/pure-data/svn/trunk/externals/iem/comport/comport/
-    cd comport
-    make
-
-## PureData from the GUI and add ComPort to your externals path.
-
-1. Navigate to File > Preferences > Path.
-2. Click "New"
-3. Browse to /root/externals/comport
-4. Click "OK"
-
-## Open Monome Test Patch
-
-Plug in your Monome and open monome-comport.pd.
-
-# References
-
-Organelle
-
-- http://forum.critterandguitari.com/t/serialosc-monome-with-organelle/233/15
-- http://forum.critterandguitari.com/t/installing-supercollider-on-the-organelle/164
-
-Monome
-
-- http://monome.org/docs/linux/
-- http://monome.org/docs/osc/
-- http://monome.org/docs/grid-studies/pd/
-- http://llllllll.co/t/critter-guitari-organelle/1570/45
-
-PureData
-
-- https://puredata.info/community/pdwiki/ComPort

@@ -1,0 +1,41 @@
+# Optional/Alternative: Send/Receive raw bytes with ComPort
+
+I've also included a test patch to experiment with sending serial directly to the Monome via [comport]. This is included just to be thourough, and could be useful for other serial interfaces, such as Arduino.
+
+## Install [comport]
+
+via https://puredata.info/community/pdwiki/ComPort
+
+    cd /root/externals/
+    svn co https://svn.code.sf.net/p/pure-data/svn/trunk/externals/iem/comport/comport/
+    cd comport
+    make
+
+## PureData from the GUI and add ComPort to your externals path.
+
+1. Navigate to File > Preferences > Path.
+2. Click "New"
+3. Browse to /root/externals/comport
+4. Click "OK"
+
+## Open Monome Test Patch
+
+Plug in your Monome and open monome-comport.pd.
+
+# References
+
+Organelle
+
+- http://forum.critterandguitari.com/t/serialosc-monome-with-organelle/233/15
+- http://forum.critterandguitari.com/t/installing-supercollider-on-the-organelle/164
+
+Monome
+
+- http://monome.org/docs/linux/
+- http://monome.org/docs/osc/
+- http://monome.org/docs/grid-studies/pd/
+- http://llllllll.co/t/critter-guitari-organelle/1570/45
+
+PureData
+
+- https://puredata.info/community/pdwiki/ComPort
