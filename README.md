@@ -15,17 +15,20 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
 
 ## Setup
 
-Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub. Power up the Organelle by plugging it in.
+Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub.
 
-When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
+Copy the `install.sh` script in this repo onto the Organelle's USB in a folder called "monome". The folder structure should look like this:
+
+- /USBDRIVE/
+  - monome/
+    - install.sh
+  - Patches/
+
+Insert the USB into the Orgnalle, and turn it on. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
 
     [root@organelle ~]]# _
 
 ## Installation
-
-Enable read/write permissions. Type the following, and pressing [enter]:
-
-    ~/scripts/remount-rw.sh
 
 Setup WIFI. Follow the instructions here: http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
 
@@ -39,9 +42,9 @@ Install python with Arch's package manager [pacman](https://wiki.archlinux.org/i
 
 Arch will sync its package database, and then ask you to confirm the installion. Type `y` and hit enter, or just hit enter.
 
-Run the organelle-monome installation script
+Run the organelle-monome `install.sh` script on the Organelle's USB drive.
 
-     ./install.sh
+     /install.sh
 
 ## Install Patches
 
