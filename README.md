@@ -47,7 +47,7 @@ Run the following command from the terminal.
 
 ## Install Python
 
-Install python with Arch's package manager [pacman](https://wiki.archlinux.org/index.php/Pacman)
+Install python with Arch's package manager, pacman.
 
     pacman -Syy python
 
