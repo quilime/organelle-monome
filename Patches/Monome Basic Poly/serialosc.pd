@@ -1,4 +1,4 @@
-#N canvas 567 293 1233 715 10;
+#N canvas 568 290 1233 715 10;
 #X msg 454 145 /monome/grid/led/all 1;
 #X msg 223 275 disconnect;
 #X msg 454 165 /monome/grid/led/all 0;
@@ -75,7 +75,6 @@
 #X obj 10 95 spigot;
 #X obj 175 171 t b b b f b;
 #X msg 855 238 serialosc-device /dev/ttyUSB0 &;
-#X msg 163 484 /sys/serialosc/list localhost 8779;
 #X msg 856 330 netstat -lup | grep serialosc | cut -d'*' -f2 | tr -d
 'a-z-:' | xargs, f 73;
 #X msg 854 135 pkill serialosc;
@@ -93,7 +92,7 @@
 #X connect 14 0 52 0;
 #X connect 17 0 28 0;
 #X connect 17 1 38 0;
-#X connect 18 0 75 0;
+#X connect 18 0 74 0;
 #X connect 18 0 68 0;
 #X connect 19 0 21 0;
 #X connect 20 0 7 0;
@@ -113,7 +112,7 @@
 #X connect 38 0 61 0;
 #X connect 39 0 40 0;
 #X connect 39 1 41 0;
-#X connect 41 0 74 0;
+#X connect 41 0 73 0;
 #X connect 46 0 21 0;
 #X connect 49 0 50 1;
 #X connect 50 0 29 0;
@@ -138,6 +137,5 @@
 #X connect 71 3 35 1;
 #X connect 71 4 1 0;
 #X connect 72 0 39 0;
-#X connect 73 0 52 0;
-#X connect 74 0 30 0;
-#X connect 75 0 17 0;
+#X connect 73 0 30 0;
+#X connect 74 0 17 0;
