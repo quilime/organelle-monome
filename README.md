@@ -41,9 +41,11 @@ Follow the instructions on [this forum thread](http://forum.critterandguitari.co
 
 ## Enable Read/Write
 
-There are a number of convenient scripts that come with the Organelle. Run the following script from the terminal to enable read/write.
+Run the following script from the terminal to enable read/write.
 
     ~/scripts/remount-rw.sh
+
+There are a number of convenient scripts that come with the Organelle. Check out the other scripts in this folder by running `ls -l ~/scripts/`.
 
 ## Install Python
 
