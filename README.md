@@ -1,6 +1,6 @@
 # Organelle + Monome
 
-This is a guide for getting a [Monome Grid](http://monome.org/grid/) working with the [Critter + Guitari Organelle](https://www.critterandguitari.com/pages/organelle). The Organelle has an arm CPU, and runs Pure Data on Arch Linux, so you will be using the linux command line. You'll need to get your Organelle [connecting to the internet](http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9) in order to and install [serialosc](https://github.com/monome/serialosc). Serialosc enables Pure Data to use OSC commands with the Monome Grid.
+This is a guide for getting a [Monome Grid](http://monome.org/grid/) working with the [Critter + Guitari Organelle](https://www.critterandguitari.com/pages/organelle). The Organelle has an arm CPU, and runs Pure Data on Arch Linux, so you will be using the linux command line. You'll need to get your Organelle [connecting to the internet](http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9) in order to and install serialosc. Serialosc enables PureData to use OSC commands with the Monome Grid.
 
 #### Hardware used for testing
 
