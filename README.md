@@ -17,13 +17,17 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
 
 Copy the patches in this repo to the Patches folder on the Organelle's USB.
 
-Copy the `serialosc-install.sh` script in this repo onto the root of Organelle's USB. The folder structure should look like this:
+Copy the `install-serialosc.sh` script in this repo onto the root of Organelle's USB. The folder structure should look like this:
 
 - USBDRIVE/
-  - serialosc-install.sh
+  - install-serialosc.sh
   - Patches/
+    ...
+    - Monome/
+    - Monome Basic Poly/
+    ...
 
-Insert the Organelle's USB drive into the Organalle.
+Eject the usbdrive from your computer after copying the files, and insert the Organelle's USB drive into the Organalle.
 
 Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater with a USB hub.  Start up the Organelle by plugging it in. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
 
