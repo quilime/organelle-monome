@@ -27,11 +27,11 @@ The structure should look like this on the Organelle's USB:
 
 ## Install
 
-Boot the Organelle with a monitor/keyboard/mouse. Run the following command to create library links:
+Boot the Organelle with a monitor/keyboard/mouse. From the terminal, run the following command to create library links:
 
     /usbdrive/include/monome/createlinks.sh
 
-Load up the Monome patches to test.
+Load up the Monome patches on the Organelle to test.
 
 ### Monome
 
