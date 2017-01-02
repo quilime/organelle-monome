@@ -63,7 +63,7 @@ Run `serialosc-install.sh` on the Organelle's USB drive.
 
 This downloads and installs libmonome and serialosc. After it's successfully installed, try the included patches to see if everything works.
 
-During installtion, a folder called `tmp/` is created. After everthing is installed and working, you can delete this folder and the install script.
+During installation, a folder called `tmp/` is created. After everthing is installed and working, you can delete this folder and the install script.
 
 # Patches
 
