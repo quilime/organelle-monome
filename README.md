@@ -17,24 +17,25 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
 
 Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub.
 
-Copy the `install.sh` script in this repo onto the Organelle's USB in a folder called "monome". The folder structure should look like this:
+Copy the patches in this repo to the Patches folder on the Organelle's USB.
 
-- /USBDRIVE/
-  - monome/
-    - install.sh
+Copy the `serialosc-install.sh` script in this repo onto the root of Organelle's USB. The folder structure should look like this:
+
+- USBDRIVE/
+  - serialosc-install.sh
   - Patches/
 
-Insert the USB into the Orgnalle, and turn it on. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
+Insert the USB into the Organlle, and turn it on. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
 
     [root@organelle ~]]# _
 
 ## Installation
 
-Setup WIFI. Follow the instructions here: http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
+## Setup WIFI
 
-Once you are online, we can clone this repo with git. After each line, press [enter]
+This is the trickiest part. Follow the instructions here: http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
 
-    git clone https://github.com/quilime/organelle-monome.git && cd organelle-monome
+## Install Python
 
 Install python with Arch's package manager [pacman](https://wiki.archlinux.org/index.php/Pacman).
 
@@ -42,13 +43,17 @@ Install python with Arch's package manager [pacman](https://wiki.archlinux.org/i
 
 Arch will sync its package database, and then ask you to confirm the installion. Type `y` and hit enter, or just hit enter.
 
-Run the organelle-monome `install.sh` script on the Organelle's USB drive.
+## Run Install Script
 
-     /install.sh
+Run `serialosc-install.sh` on the Organelle's USB drive.
+
+     /usbdrive/serialosc-install.sh
+
+After serialosc is done installing. When it's done
 
 ## Install Patches
 
-Copy the patches in this repo to the Patches folder on the Organelle's USB. Two patches are included:
+Two patches are included:
 
 ##  Monome Organelle Test Patches
 
