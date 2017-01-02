@@ -13,7 +13,11 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
 
 ## How to Use
 
-1. Copy the Patches over, and copy the`include/` folder to the root of the Organelle's USB drive, so it's alongside the Patches folder. The structure should look like this on the Organelle's USB:
+Copy the Patches in the Patches folder on the USB drive.
+
+Copy the`include/` folder to the root of the Organelle's USB drive, so it's alongside the Patches folder.
+
+The structure should look like this on the Organelle's USB:
 
 - usbdrive/
   - Patches/
@@ -21,24 +25,18 @@ Half of my 128's LEDs weren't lit when powered from the USB port on the Organell
     - Monome Basic Poly/
   - include/
 
-## Run install script
+## Install
 
-Boot the Organelle with a monitor/keyboard/mouse. Run the following commands:
-
-Remount the filesystem as read/write
-
-    /root/scripts/remount-rw.sh
-
-Create symlinks for monome libraries
+Boot the Organelle with a monitor/keyboard/mouse. Run the following command to create library links:
 
     /usbdrive/include/monome/createlinks.sh
 
 Load up the Monome patches to test.
 
-## Monome
+### Monome
 
 All the LED's should blink, and then each key's LED should illuminate when pressed. The Organelle should display the last key pressed x y and state.
 
-## Monome Basic Poly
+### Monome Basic Poly
 
 The same thing as Monome, but each key plays sounds based on the Basic Poly patch that shipped with the Organelle.
