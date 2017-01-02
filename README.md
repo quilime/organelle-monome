@@ -23,7 +23,9 @@ Copy the `serialosc-install.sh` script in this repo onto the root of Organelle's
   - serialosc-install.sh
   - Patches/
 
-Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater via an external USB hub. Insert the Organelle's USB drive into the Organlle. Start up the Organelle by plugging it in. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
+Insert the Organelle's USB drive into the Organalle.
+
+Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater with a USB hub.  Start up the Organelle by plugging it in. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
 
     [root@organelle ~]]# _
 
