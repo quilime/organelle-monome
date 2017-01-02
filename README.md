@@ -27,7 +27,7 @@ Copy the `install-serialosc.sh` script in this repo onto the root of Organelle's
     - Monome Basic Poly/
     - ...
 
-Eject the usbdrive from your computer after copying the files, and insert the Organelle's USB drive into the Organalle.
+Eject the usbdrive from your computer after copying the files, and insert the Organelle's USB drive into the Organelle.
 
 Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater with a USB hub.  Start up the Organelle by plugging it in. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
 
