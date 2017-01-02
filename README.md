@@ -4,8 +4,7 @@
 
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
-  - Powered USB Hub
-  - 1920 x 1080 monitor w/HDMI connection.
+  - 1920 x 1080 monitor w/HDMI.
   - Mouse & Keyboard
   - Powered USB Hub
 
