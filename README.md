@@ -33,7 +33,11 @@ Insert the USB into the Organlle, and turn it on. When the Organelle boots up, y
 
 ## Setup WIFI
 
-This is the trickiest part. Follow the instructions here: http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
+This was the trickiest part. Follow the instructions here: http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9
+
+## Enable Read/Write
+
+    ~/scripts/remount-rw.sh
 
 ## Install Python
 
@@ -49,9 +53,11 @@ Run `serialosc-install.sh` on the Organelle's USB drive.
 
      /usbdrive/serialosc-install.sh
 
-After serialosc is done installing. When it's done
+This downloads and installs libmonome and serialosc. After it's successfully installed, try the included Patches with the Organelle to see if everything works.
 
-## Install Patches
+During installtion, a folder called `tmp/` is created. After everthing is installed, you can delete this folder and the install script.
+
+# Patches
 
 Two patches are included:
 
