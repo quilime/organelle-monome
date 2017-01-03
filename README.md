@@ -1,80 +1,28 @@
 # Organelle + Monome
 
-This is a guide for getting a [Monome Grid](http://monome.org/grid/) working with the [Critter + Guitari Organelle](https://www.critterandguitari.com/pages/organelle). The Organelle has an arm CPU, and runs Pure Data on Arch Linux, so you will be using the linux command line. You'll need to get your Organelle [connecting to the internet](http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9) in order to and install serialosc. Serialosc enables PureData to use OSC commands with the Monome Grid.
-
-#### Hardware used for testing
+## Hardware
 
   - Critter + Gutari Organelle
   - Monome 128 Grayscale
-  - USB Wifi Adapter (I used a [Canakit adapter](http://www.canakit.com/raspberry-pi-wifi.html), but any adapter with a Ralink 5370 chipset should work).
-  - 1920 x 1080 monitor w/HDMI connection.
-  - Mouse & Keyboard
+
+Optional
+
   - Powered USB Hub
 
-Half of my 128's LEDs weren't lit when powered from the USB port on the Organelle, the addition of the powered USB hub solved this.
+## How to Use
 
-## Setup
+Copy the example patches to the Patches folder on the USB drive.
 
-Copy the patches in this repo to the Patches folder on the Organelle's USB.
+Plug in the Monome to the USB Hub, and the USB Hub into the Organelle. On my Monome 128, half of the LEDs weren't lit when powered from the USB port on the Organelle. The keys worked, however. Other Monome's may not need a hub, YMMV.
 
-Copy the `install-serialosc.sh` script in this repo onto the root of Organelle's USB. The folder structure should look like this:
+### Monome-Install
 
-- USBDRIVE/
-  - install-serialosc.sh
-  - Patches/
-    - ...
-    - Monome/
-    - Monome Basic Poly/
-    - ...
+Run this patch first. This patch installs the serialosc binaries and libmonome shared libraries to the Organelle's OS.
 
-Eject the usbdrive from your computer after copying the files, and insert the Organelle's USB drive into the Organelle.
+Press AUX to start installation.
 
-Attach your Organelle to a 1920 x 1080 monitor via HDMI, and plug in a mouse, keyboard, and wifi adapater with a USB hub.  Start up the Organelle by plugging it in. When the Organelle boots up, you will be welcomed with an Arch Linux terminal that looks like this.
-
-    [root@organelle ~]]# _
-
-## Installation
-
-## Setup WIFI
-
-Follow the instructions on [this forum thread](http://forum.critterandguitari.com/t/using-a-wifi-adapter/158/9).
-
-## Enable Read/Write
-
-Run the following script from the terminal to enable read/write.
-
-    ~/scripts/remount-rw.sh
-
-There are a number of convenient scripts that come with the Organelle. Check out the other scripts in this folder by running `ls -l ~/scripts/`.
-
-## Install Python
-
-Install python with Arch's package manager, pacman.
-
-    pacman -Syy python
-
-Arch will sync its package database, and then ask you to confirm the installion. Type `y` and hit enter, or just hit enter.
-
-## Run Install Script
-
-Run `serialosc-install.sh` on the Organelle's USB drive.
-
-     cd /usbdrive/ && ./serialosc-install.sh
-
-This downloads and installs libmonome and serialosc. After it's successfully installed, try the included patches to see if everything works.
-
-During installation, a folder called `tmp/` is created. After everthing is installed and working, you can delete this folder and the install script.
-
-# Patches
-
-Two patches are included:
-
-##  Monome Organelle Test Patches
-
-### Monome
-
-This patch should connect the Monome to the organelle. When the patch stars, all the LED's should flash on and then off. Each Monome button should illuminate when it's pressed. Open the [serialosc] patch to see how the patch connects to serialosc via the start/stop serialosc scripts.
+After installation, all the monome's LED's should blink, and then each key's LED should illuminate when pressed. The Organelle should display the last key pressed x y and state. Pressing AUX again will toggle a lightshow.
 
 ### Monome Basic Poly
 
-This patch combines the Basic Poly patch that came with the Organelle, utilizing the Monome's buttons as keys.
+Try this patch after running Monome-Install. Indiviual Monome Keys illuminate when pressed, and trigger the Basic Poly voice patch that shipped with the Organelle.
