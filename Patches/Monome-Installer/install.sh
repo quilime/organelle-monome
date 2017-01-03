@@ -1,16 +1,14 @@
 #!/bin/sh
 
 LOC=/usbdrive/Patches/Monome-Installer
+BIN=/usr/local/bin
+LIB=/usr/local/lib
 
 sleep 0.5
 
 echo "Enabling r/w"
 mount / -o remount,rw
 
-sleep 1
-
-echo "Setting Paths"
-echo "/usr/local/lib" > /etc/ld.so.conf.d/usrlocal.conf
 sleep 1
 
 echo "Copying Libs"
@@ -24,17 +22,22 @@ cp ${LOC}/lib/libmonome.so /usr/local/lib/
 sleep 1
 
 echo "Linking Shared Objs"
-ln -s /usr/local/lib/libmonome.so /usr/local/lib/libmonome.so.1
-ln -s /usr/local/lib/libmonome.so /usr/local/lib/libmonome.so.1.4.0
-ldconfig
+ln -s ${LIB}/libmonome.so ${LIB}/libmonome.so.1
+ln -s ${LIB}/libmonome.so ${LIB}/libmonome.so.1.4.0
 
 sleep 1
 
+echo "Setting Paths"
+# libmonome looks for libs in in /usr/local/lib/, so add it to our libpath
+echo "${LIB}" > /etc/ld.so.conf.d/usrlocal.conf
+ldconfig
+sleep 1
+
 echo "Copying Binaries"
-cp ${LOC}/monomeserial /usr/local/bin/
-cp ${LOC}/serialoscd /usr/local/bin/
-cp ${LOC}/serialosc-detector /usr/local/bin/
-cp ${LOC}/serialosc-device /usr/local/bin/
+cp ${LOC}/monomeserial ${BIN}/
+cp ${LOC}/serialoscd ${BIN}/
+cp ${LOC}/serialosc-detector ${BIN}/
+cp ${LOC}/serialosc-device ${BIN}/
 
 sleep 1
 
