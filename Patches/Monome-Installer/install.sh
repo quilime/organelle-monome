@@ -10,6 +10,7 @@ mount / -o remount,rw
 sleep 1
 
 echo "Setting Paths"
+# libmonome looks for libs in in /usr/local/lib/, so add it to our libpath
 echo "/usr/local/lib" > /etc/ld.so.conf.d/usrlocal.conf
 sleep 1
 
