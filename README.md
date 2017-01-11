@@ -1,5 +1,7 @@
 # Organelle + Monome
 
+![](http://media.quilime.com/files/img/organelle-monome.png)
+
 ## Hardware
 
   - Critter + Gutari Organelle
