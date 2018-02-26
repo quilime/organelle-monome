@@ -1,5 +1,5 @@
-#N canvas 498 358 1104 648 10;
-#N canvas 162 348 1212 816 monome-test 1;
+#N canvas 499 355 1104 648 10;
+#N canvas 592 136 1212 816 monome-test 0;
 #X msg 37 189 /monome/grid/led/all 1;
 #X msg 49 213 /monome/grid/led/all 0;
 #X obj 43 608 routeOSC /monome/grid/key;
