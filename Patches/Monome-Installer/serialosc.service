@@ -1,0 +1,10 @@
+[Unit]
+Description=SerialOSC Daemon
+
+[Service]
+ExecStart=/usr/local/bin/serialoscd
+Type=forking
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

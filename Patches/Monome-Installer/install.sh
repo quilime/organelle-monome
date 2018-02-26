@@ -31,6 +31,7 @@ echo "Setting Paths"
 # libmonome looks for libs in in /usr/local/lib/, so add it to our libpath
 echo "${LIB}" > /etc/ld.so.conf.d/usrlocal.conf
 ldconfig
+
 sleep 1
 
 echo "Copying Binaries"
@@ -38,6 +39,12 @@ cp ${LOC}/monomeserial ${BIN}/
 cp ${LOC}/serialoscd ${BIN}/
 cp ${LOC}/serialosc-detector ${BIN}/
 cp ${LOC}/serialosc-device ${BIN}/
+
+sleep 1
+
+echo "Starting Services"
+cp ${LOC}/serialosc.service /etc/systemd/system/
+systemctl enable --now serialosc.service
 
 sleep 1
 

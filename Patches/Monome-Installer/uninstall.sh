@@ -37,5 +37,11 @@ rm /usr/local/bin/serialosc-device
 
 sleep 1
 
+echo "Disabling Services"
+systemctl disable serialosc.service
+rm /etc/systemd/system/serialosc.service
+
+sleep 1
+
 echo "Disabling r/w"
 mount / -o remount,ro
