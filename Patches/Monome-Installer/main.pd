@@ -1,5 +1,5 @@
-#N canvas 499 355 1104 648 10;
-#N canvas 592 136 1212 816 monome-test 0;
+#N canvas 407 316 1104 648 10;
+#N canvas 593 133 1212 816 monome-test 0;
 #X msg 37 189 /monome/grid/led/all 1;
 #X msg 49 213 /monome/grid/led/all 0;
 #X obj 43 608 routeOSC /monome/grid/key;
@@ -28,7 +28,7 @@
 #X obj 387 327 inlet test;
 #X obj 388 347 t b;
 #X obj 34 63 delay 500;
-#N canvas 455 175 1029 786 lightshow 0;
+#N canvas 457 169 1029 786 lightshow 0;
 #X obj 270 71 bng 15 250 50 0 empty empty flash_led_routine 17 7 0
 10 -262144 -1 -1;
 #X obj 298 325 pack 0;
@@ -46,10 +46,10 @@
 #X msg 412 210 0;
 #X msg 455 427 /monome/grid/led/row 0 \$1 0 0;
 #X obj 294 297 spigot;
-#X obj 353 277 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 353 277 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 403 306 spigot;
-#X obj 472 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 472 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 454 453 + 8;
 #X obj 454 474 pack 0;
@@ -110,8 +110,8 @@
 #X connect 29 0 16 0;
 #X connect 30 0 25 0;
 #X connect 31 0 5 0;
-#X restore 810 425 pd lightshow;
-#X obj 832 287 r aux;
+#X restore 798 487 pd lightshow;
+#X obj 832 245 r aux;
 #X obj 288 723 s screenLine3;
 #X obj 893 294 r done;
 #X obj 832 336 spigot;
@@ -120,7 +120,8 @@
 1;
 #X obj 832 311 sel 1;
 #X obj 831 386 sel 1;
-#X text 832 256 lightshow;
+#X text 832 224 lightshow;
+#X obj 790 439 delay 1000;
 #X connect 0 0 20 0;
 #X connect 1 0 20 0;
 #X connect 2 0 3 0;
@@ -151,8 +152,10 @@
 #X connect 31 0 30 1;
 #X connect 32 0 34 0;
 #X connect 33 0 30 0;
-#X connect 34 0 26 0;
+#X connect 34 0 20 1;
+#X connect 34 0 36 0;
 #X connect 34 1 26 1;
+#X connect 36 0 26 0;
 #X restore 473 143 pd monome-test;
 #X obj 460 367 shell;
 #X obj 343 373 i;
@@ -193,8 +196,9 @@
 #X text 16 39 This patch installs serialosc and libmonome on your Organelle
 OS. When complete \, your PureData should alloq your Monome grid to
 send OSC messages through serialosc;
-#X msg 14 488 \; \; screenLine4 ... Done! \; screenLine5 AUX toggles
-Lightshow \;;
+#X msg 13 487 \; screenLine2 ... Done! \; screenLine3 Unplug/Plug in
+Monome \; screenLine4 Press AUX to toggle \; screenLine5 Lightshow
+\;;
 #X connect 1 0 11 0;
 #X connect 1 0 25 0;
 #X connect 1 1 24 0;
