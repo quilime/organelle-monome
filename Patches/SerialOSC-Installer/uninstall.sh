@@ -35,9 +35,9 @@ rm /usr/local/bin/serialoscd
 rm /usr/local/bin/serialosc-detector
 rm /usr/local/bin/serialosc-device
 
-sleep 1
+#sleep 1
 
-echo "Disabling Services"
+#echo "Disabling Services"
 systemctl disable serialosc.service
 rm /etc/systemd/system/serialosc.service
 

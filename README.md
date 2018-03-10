@@ -1,28 +1,45 @@
-# Organelle + Monome
+# Organelle + Monome via SerialOSC
 
 ![](http://media.quilime.com/files/img/organelle-monome.png)
 
 ## Hardware
 
   - Critter + Gutari Organelle
-  - Monome 128 Grayscale
+    - Tested with Monome 128 Grid Grayscale, other monomes should work
 
-Optional
+    Optional
 
-  - Powered USB Hub
+      - Powered USB Hub
 
 ## How to Use
 
-Plug in the Monome to the USB Hub, and the USB Hub into the Organelle. On my Monome 128, half of the LEDs weren't lit when powered from the USB port on the Organelle. The keys worked, however. Other Monome's may not need a hub, YMMV.
+  1. Copy the example patches to your Organelle's USB drive or SD card.
 
-### Monome-Install
+    2. Plug in the Monome in via USB. Note: The Organelle's USB port doesn't supply enough power for a Monome 128 Grid to light all its LED's. A powered hub may be required for your Grid.
 
-Run this patch first. It MUST be in the root of the Patches folder to run. This patch installs the serialosc binaries and libmonome shared libraries to the Organelle's OS.
+## Installation
+
+Run the SerialOSC-Install patch. This patch installs the serialosc binaries and libmonome shared libraries to the Organelle's OS. It also adds serialosc as a daemon that runs at startup.
 
 Press AUX to start installation.
 
-After installation, all the monome's LED's should blink, and then each key's LED should illuminate when pressed. The Organelle should display the last key pressed x y and state. Pressing AUX again will toggle a lightshow. You may delete this patch after the monome successful installs.
+After installation, plug in a Monome Grid to the Organelle or a connected USB Hub. The display should
+notify you if it is connected and active. Unplug the grid and it should display that it's disconnected. When the grid is active, pressing a key will light it up and a sound will be heard.
+
+## Patches
+
+### SerialOSC-Install
+
+SerialOSC Installer patch.
 
 ### Monome Basic Poly
 
-Indiviual Monome keys illuminate when pressed, and trigger the Basic Poly voice patch that shipped with the Organelle.
+Try this patch after running Monome-Install. Indiviual Monome Keys illuminate when pressed, and trigger the Basic Poly voice patch that shipped with the Organelle.
+
+## Uninstall
+
+Via the terminal, navigate to the SerialOSC-Installer folder and run
+
+    ./uninstall.sh
+
+

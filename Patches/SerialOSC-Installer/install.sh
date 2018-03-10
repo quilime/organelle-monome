@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LOC=/usbdrive/Patches/Monome-Installer
+LOC="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # script working dir
 BIN=/usr/local/bin
 LIB=/usr/local/lib
 
@@ -40,9 +40,9 @@ cp ${LOC}/serialoscd ${BIN}/
 cp ${LOC}/serialosc-detector ${BIN}/
 cp ${LOC}/serialosc-device ${BIN}/
 
-sleep 1
+#sleep 1
 
-echo "Starting Services"
+echo "Adding Services"
 cp ${LOC}/serialosc.service /etc/systemd/system/
 systemctl enable --now serialosc.service
 
