@@ -1,8 +1,8 @@
-#N canvas 785 347 1062 619 10;
+#N canvas 790 332 1062 619 10;
 #X obj 456 360 shell;
 #X msg 343 289 1;
-#X obj 690 27 loadbang;
-#X obj 690 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 690 35 loadbang;
+#X obj 690 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 343 351 s led;
 #X obj 456 471 print STDOUT;
@@ -13,8 +13,6 @@
 #X msg 223 146 0;
 #X obj 343 159 spigot 1;
 #X obj 220 107 r done;
-#X msg 690 98 \; screenLine1 Monome Installer \; screenLine2 \; screenLine3
-Press AUX to start \; screenLine4 \; screenLine5 \;;
 #X msg 456 274 cd $( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd ) &&
 ./install.sh, f 74;
 #X msg 463 336 cd $( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd ) &&
@@ -28,35 +26,41 @@ OS;
 \; screenLine4 Unplug/Plug in Grid \; screenLine5 \;;
 #X obj 574 437 serialosc;
 #X obj 574 500 s screenLine5;
-#X obj 659 209 delay 2000;
 #X obj 20 80 bng 15 250 50 0 empty empty uninstall 17 7 0 10 -262144
 -1 -1;
 #X msg 665 420 /monome/grid/led/set \$1 \$2 \$3;
 #X obj 667 454 routeOSC /monome/grid/key;
+#X obj 728 541 s screenLine3;
+#X obj 684 494 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 690 98 \; screenLine1 serialosc installer \; screenLine2 \;
+screenLine3 Press AUX to start \; screenLine4 \; screenLine5 \;;
+#X msg 718 514 Installed;
 #X connect 0 0 5 0;
-#X connect 0 0 16 0;
+#X connect 0 0 15 0;
 #X connect 0 1 9 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
-#X connect 3 0 13 0;
-#X connect 3 0 23 0;
+#X connect 3 0 27 0;
 #X connect 6 0 11 0;
 #X connect 9 0 8 0;
-#X connect 9 0 21 1;
+#X connect 9 0 20 1;
 #X connect 10 0 11 1;
 #X connect 10 0 4 0;
 #X connect 11 0 1 0;
-#X connect 11 0 18 0;
+#X connect 11 0 17 0;
 #X connect 12 0 10 0;
-#X connect 12 0 20 0;
+#X connect 12 0 19 0;
+#X connect 13 0 0 0;
 #X connect 14 0 0 0;
-#X connect 15 0 0 0;
-#X connect 18 0 14 0;
-#X connect 18 0 19 0;
-#X connect 19 0 16 0;
-#X connect 21 0 22 0;
-#X connect 21 0 26 0;
-#X connect 23 0 21 1;
-#X connect 24 0 15 0;
-#X connect 25 0 21 0;
-#X connect 26 0 25 0;
+#X connect 17 0 13 0;
+#X connect 17 0 18 0;
+#X connect 18 0 15 0;
+#X connect 20 0 21 0;
+#X connect 20 0 24 0;
+#X connect 20 0 26 0;
+#X connect 22 0 14 0;
+#X connect 23 0 20 0;
+#X connect 24 0 23 0;
+#X connect 26 0 28 0;
+#X connect 28 0 25 0;

@@ -24,7 +24,7 @@ Run the SerialOSC-Install patch. This patch installs the serialosc binaries and 
 Press AUX to start installation.
 
 After installation, plug in a Monome Grid to the Organelle or a connected USB Hub. The display should
-notify you if it is connected and active. Unplug the grid and it should display that it's disconnected. When the grid is active, pressing a key will light it up.
+notify you if it is connected and active. Unplug the grid and it should display that it's disconnected. When the grid is active, pressing a key will light it up and a sound will be heard.
 
 ## Patches
 

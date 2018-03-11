@@ -1,7 +1,7 @@
-#N canvas 173 68 1657 934 10;
+#N canvas 174 65 1657 934 10;
 #X msg 734 463 focus;
 #X obj 781 339 vsl 15 128 0 4095 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3091 1;
+-1 -1 5884 1;
 #X msg 763 497 param \$1;
 #X floatatom 845 486 5 0 0 0 - - -, f 5;
 #X msg 141 377 focus;
