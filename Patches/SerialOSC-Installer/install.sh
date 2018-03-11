@@ -11,6 +11,13 @@ mount / -o remount,rw
 
 sleep 1
 
+echo "Preparing"
+systemctl disable serialosc.service
+rm /etc/systemd/system/serialosc.service
+${LOC}/killserialosc.sh
+
+sleep 1
+
 echo "Copying Libs"
 cp -r ${LOC}/lib/monome /usr/local/lib/
 

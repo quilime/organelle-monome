@@ -2,7 +2,7 @@
 Description=SerialOSC Daemon
 
 [Service]
-ExecStart=/usr/local/bin/start-serialoscd
+ExecStart=/usr/local/bin/serialoscd
 Restart=on-failure
 User=root
 Group=root
