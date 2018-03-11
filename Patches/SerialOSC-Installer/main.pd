@@ -1,4 +1,4 @@
-#N canvas 790 332 1062 619 10;
+#N canvas 791 50 1062 898 10;
 #X obj 456 360 shell;
 #X msg 343 289 1;
 #X obj 690 35 loadbang;
@@ -24,18 +24,20 @@ OS;
 #X msg 424 245 Installing...;
 #X msg 159 468 \; screenLine1 \; screenLine2 \; screenLine3 ... Complete!
 \; screenLine4 Unplug/Plug in Grid \; screenLine5 \;;
-#X obj 574 437 serialosc;
-#X obj 574 500 s screenLine5;
+#X obj 641 565 serialosc;
+#X obj 641 628 s screenLine5;
 #X obj 20 80 bng 15 250 50 0 empty empty uninstall 17 7 0 10 -262144
 -1 -1;
-#X msg 665 420 /monome/grid/led/set \$1 \$2 \$3;
-#X obj 667 454 routeOSC /monome/grid/key;
-#X obj 728 541 s screenLine3;
-#X obj 684 494 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 732 548 /monome/grid/led/set \$1 \$2 \$3;
+#X obj 734 582 routeOSC /monome/grid/key;
+#X obj 795 669 s screenLine3;
+#X obj 751 622 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 690 98 \; screenLine1 serialosc installer \; screenLine2 \;
 screenLine3 Press AUX to start \; screenLine4 \; screenLine5 \;;
-#X msg 718 514 Installed;
+#X msg 785 642 Installed;
+#X msg 675 481 /monome/grid/led/all 1;
+#X obj 675 455 r on-serialosc-load;
 #X connect 0 0 5 0;
 #X connect 0 0 15 0;
 #X connect 0 1 9 0;
@@ -64,3 +66,5 @@ screenLine3 Press AUX to start \; screenLine4 \; screenLine5 \;;
 #X connect 24 0 23 0;
 #X connect 26 0 28 0;
 #X connect 28 0 25 0;
+#X connect 29 0 20 0;
+#X connect 30 0 29 0;
