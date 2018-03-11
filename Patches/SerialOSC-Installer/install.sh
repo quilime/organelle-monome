@@ -55,8 +55,8 @@ chmod 644 /etc/systemd/system/serialosc.service
 systemctl enable --now serialosc.service
 
 # create startup script. serialosc hangs when starting directly as a ExecStart
-echo "serialoscd" > ${BIN}/start-serialoscd
-chmod u+x ${BIN}/start-serialoscd
+# echo "serialoscd" > ${BIN}/start-serialoscd
+# chmod u+x ${BIN}/start-serialoscd
 
 sleep 1
 
