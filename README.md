@@ -19,12 +19,12 @@
 
 ## Installation
 
-Run the SerialOSC-Install patch. This patch installs the serialosc binaries and libmonome shared libraries to the Organelle's OS. It also adds serialosc as a daemon that runs at startup.
+Run SerialOSC-Installer first. This patch installs the serialosc binaries and libmonome shared libraries to the Organelle's OS. It also adds serialosc as a daemon that runs at startup.
 
   1. Plug in the Monome Grid via USB
-  2. Press AUX to start installation.
+  2. Press AUX to start installation
 
-Upon a successful installation, the display should notify you if it is connected and active. When the grid is active, pressing a key will light it up and a sound will be heard.
+Upon a successful installation, the display should notify you if it is connected and active and the Grid's light should illuminate. Pressing a key will light it up.
 
 ## Patches
 
@@ -34,17 +34,19 @@ SerialOSC Installer patch.
 
 ### Monome Basic Poly
 
-Indiviual Monome Keys illuminate when pressed, and trigger the Basic Poly voice patch that shipped with the Organelle.
+Indiviual Monome Keys illuminate when pressed and trigger the Basic Poly voice patch that shipped with the Organelle.
 
 ### Grid Apps
 
-Various Grid apps ported to PureData from Aleph via https://github.com/boqs/pd-grid, including
+Various Grid apps examples ported to PureData from Aleph via https://github.com/boqs/pd-grid, including
 
   - grid
   - kria
   - meadowphysics
   - step
   - whitewhale
+
+Note: These apps do not make sound, but they could be used as a starting point for other patches.
 
 ## Uninstall
 
