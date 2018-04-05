@@ -5,17 +5,17 @@
 ## Hardware
 
   - Critter + Gutari Organelle
-    - Tested with Monome 128 Grid Grayscale (non varibright), other Monome Grids should work
+  - Monome 128 Grid Grayscale (non varibright). Other Monome Grids should work.
 
-    Optional
+  Optional
 
-      - Powered USB Hub
+  - Powered USB Hub
 
 ## Patches
 
 ### SerialOSC-Install
 
-SerialOSC Installer patch.
+This patch installs `serialosc` on the Organelle.
 
 ### Monome Basic Poly
 
@@ -37,11 +37,11 @@ Note: These apps do not make sound. They are intended to be used as an example a
 
   1. Copy the example patches to your Organelle's USB drive or SD card.
 
-    2. Plug in the Monome in via USB. Note: The Organelle's USB port doesn't supply enough power for a Monome 128 Grid to light all its LED's, a powered USB hub was required.
+  2. Plug in the Monome. Note: In my testing, the Organelle's USB port doesn't supply enough power for a Monome 128 Grid to light all its LED's, so a powered USB hub was required.
 
 ## Installation
 
-Run SerialOSC-Installer first. This patch installs the serialosc binaries and libmonome shared libraries to the Organelle's OS. It also adds serialosc as a daemon that runs at startup.
+Run *SerialOSC-Installer* first. This patch installs the serialosc binaries and libmonome shared libraries to the Organelle's OS. It also adds serialosc as a daemon that runs at startup.
 
   1. Plug in the Monome Grid via USB
   2. Press AUX to start installation
