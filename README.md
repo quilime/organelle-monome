@@ -26,6 +26,8 @@ Run SerialOSC-Installer first. This patch installs the serialosc binaries and li
 
 Upon a successful installation, the display should notify you if it is connected and active and the Grid's light should illuminate. Pressing a key will light it up.
 
+If you are not compiling the extensions yourself, you only need the compiled extensions and the pd files to run the patches.
+
 ## Patches
 
 ### SerialOSC-Install
