@@ -31,7 +31,7 @@ Various Grid apps examples ported to PureData from Aleph via https://github.com/
   - step
   - whitewhale
 
-Note: These apps do not make sound, but they could be used as a starting point for other patches.
+Note: These apps do not make sound. They are intended to be used as an example and starting point for new patches.
 
 ## How to Use
 
